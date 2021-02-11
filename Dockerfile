@@ -13,6 +13,7 @@ RUN apt update && \
         openjdk-8-jdk-headless \
         pkg-config \
         squashfs-tools \
+        tzdata \
         wget
 
 # Install bpipe from github.
@@ -40,4 +41,3 @@ RUN mkdir -p "${GOPATH}/src/github.com/sylabs" && \
 
 RUN mkdir /data
 WORKDIR /data
-CMD ["bpipe"]
